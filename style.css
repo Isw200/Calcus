@@ -1,0 +1,225 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(to top,rgb(27, 27, 40), rgb(76, 76, 76));
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.cal_container{
+    width: 20%;
+    margin: 8em auto;
+    padding: 2em 1em;
+    background-image: linear-gradient(to top,rgb(0, 0, 0), rgb(130, 129, 129));
+    border-radius: 30px;
+    box-shadow: -2px -1px 20px black, 2px 2px 20px rgba(102, 102, 102, 0.484);
+}
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+}
+#clear{
+    background-color: rgb(255, 200, 0);
+    color: rgb(91, 91, 91);
+}
+#clear:hover{
+    background-color: #F79D00;
+}
+#clear:active{
+    background-color: rgb(255, 200, 0);
+}
+.buttons button{
+    font-size: 1.4rem;
+    padding: 0.7em 0;
+    border-radius: 50px;
+    border: 0;
+    background-color: rgb(63, 63, 63);
+    color: rgb(193, 193, 193);
+    box-shadow:  -1px -1px 0px rgb(147, 145, 145), 1px 1px 0px rgb(0, 0, 0);
+}
+.buttons button:hover{
+    background-color:rgb(33, 33, 33);;
+}
+.buttons button:active{
+    background-color: rgb(63, 63, 63);
+}
+.buttons .color--1{
+    background-color: rgb(97, 74, 42);
+}
+.buttons .color--1:hover{
+    background-color: rgb(59, 41, 0);
+}
+.buttons .color--1:active{
+    background-color: rgb(106, 74, 0);
+}
+.buttons .color--2{
+    background-color: rgb(84, 0, 95);
+}
+.buttons .color--2:hover{
+    background-color: rgb(47, 0, 53);
+}
+.buttons .color--2:active{
+    background-color: rgb(84, 0, 95);
+}
+#ans{
+    background-color: rgb(115, 50, 201);
+}
+#ans:hover{
+    background-color: rgb(47, 0, 53);
+}
+#ans:active{
+    background-color: rgb(115, 50, 201);
+}
+#input{
+    width: 100%;
+    font-size: 1.7rem;
+    padding: 0 0.3em;
+    text-align: right;
+    height: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(51, 51, 51);
+    overflow: hidden;
+}
+#display{
+    width: 100%;
+    font-size: 3rem;
+    padding: 0.5em 0.3em;
+    text-align: right;
+    height: 2em;
+    margin-bottom: 0.4em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    overflow: hidden;
+}
+#copyright{
+    width: 100%;
+    bottom: 3em;
+    position: absolute;
+    text-align: center;
+    color: rgb(118, 119, 119);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/****************
+theme buttons
+****************/
+
+.theme_controller{
+    display: flex;
+    width: 3.4em;
+    border-radius: 30px;
+    padding: 0.2em;
+    justify-content: space-between;
+    background-color: rgb(87, 86, 86);
+    box-shadow:  1px 1px 5px black,-1px -1px 5px rgba(255, 255, 255, 0.318); 
+}
+.theme_controller button{
+    width: 1.5em;
+    height: 1.5em;
+    background-color: rgba(240, 248, 255, 0);
+    border-radius: 30px;
+    border: 0;
+    cursor: pointer;
+    transition: 0.3s ease;
+    
+}
+#dark ,#light{
+    z-index: 3;
+}
+#ball{
+    position: absolute;
+    background-color: black;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.297);
+    z-index: 2;
+}
+
+@media (max-width: 2500px) {
+    .cal_container{
+        width: 21em;
+    }
+}
+@media (max-width: 400px) {
+    .cal_container{
+        width: 80%;
+    }
+}
+@media (max-height:1150px) {
+    .cal_container{
+        margin: 8em auto;
+    }
+    #copyright{
+        width: 100%;
+        bottom: 1em;
+        position: absolute;
+        text-align: center;
+        font-size: 0.7rem;
+    }
+    body{
+        overflow: hidden;
+    }
+}
+@media (max-height:850px) {
+    .cal_container{
+        margin: 2em auto;
+        height: 42em;
+    }
+    #copyright{
+        width: 100%;
+        bottom: 1em;
+        position: absolute;
+    }
+}
+@media (max-height:750px) {
+    .cal_container{
+        margin: 4em auto;
+        height: 39em;
+    }
+    .buttons button{
+        font-size: 1.2rem;
+        padding: 0.7em 0;    
+    }
+    #input{
+        font-size: 1.7rem;
+    }
+    #display{
+        font-size: 3rem;
+    }
+}
+@media (max-height:700px) {
+    .cal_container{
+        margin: 1em auto;
+        height: 32em;
+    }
+    .buttons button{
+        font-size: 1rem;
+        padding: 0.6em 0;    
+    }
+    #input{
+        font-size: 1.4rem;
+    }
+    #display{
+        font-size: 2rem;
+    }
+}
+@media (max-height:650px) {
+    .cal_container{
+        margin: 1em auto;
+        height: 32em;
+    }
+    .buttons button{
+        font-size: 1rem;
+        padding: 0.6em 0;    
+    }
+    #input{
+        font-size: 1.4rem;
+    }
+    #display{
+        font-size: 2rem;
+    }
+}
